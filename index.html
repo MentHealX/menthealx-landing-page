@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MentHealX - A Temple of Healing for Every Mind</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f7fb; /* Light pastel background */
+            color: #444; /* Darker text for readability */
+        }
+        header {
+            background: linear-gradient(90deg, #ff6a00, #ffcc00); /* Warm gradient */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid #ffd700; /* Golden border for distinction */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.3em;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .about, .services, .how-it-works, .pricing, .faq, .contact {
+            margin-bottom: 40px;
+        }
+        .cta-options {
+            margin: 40px auto;
+            text-align: left;
+            max-width: 700px;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cta-options h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #ff6a00;
+        }
+        .cta-step {
+            margin-bottom: 25px;
+        }
+        .cta-step h3 {
+            color: #ffcc00;
+            font-size: 1.7em;
+            margin-bottom: 10px;
+        }
+        .cta-step p {
+            margin: 0;
+        }
+        .cta-step a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 12px 25px;
+            background-color: #ff6a00;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .cta-step a:hover {
+            background-color: #ff4500;
+        }
+        .services .service-card {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .services .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .services .service-card h3 {
+            color: #ff6a00;
+            font-size: 1.6em;
+        }
+        .services .service-card p {
+            color: #666;
+        }
+        .how-it-works .steps {
+            display: flex;
+            justify-content: space-around;
+            text-align: left;
+        }
+        .how-it-works .steps div {
+            max-width: 300px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .how-it-works .steps div h3 {
+            color: #ff6a00;
+            font-size: 1.6em;
+        }
+        .how-it-works .steps div p {
+            color: #666;
+        }
+        .pricing .plan {
+            display: inline-block;
+            width: 30%;
+            margin: 15px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pricing .plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .pricing .plan h3 {
+            color: #ff6a00;
+            font-size: 1.8em;
+        }
+        .pricing .plan p {
+            color: #444;
+            font-size: 1.2em;
+        }
+        .pricing .cta {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #444;
+        }
+        .pricing .cta a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .faq .question {
+            text-align: left;
+            margin-bottom: 20px;
+            padding-left: 20px;
+            font-size: 1.2em;
+        }
+        .faq h3 {
+            color: #ff6a00;
+            font-size: 1.7em;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 5px solid #ff6a00;
+        }
+        footer a {
+            color: #ff6a00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .services .service-card, .pricing .plan {
+                width: 90%;
+                margin: 10px auto;
+            }
+            .how-it-works .steps {
+                display: block;
+                text-align: center;
+            }
+            .how-it-works .steps div {
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MentHealX - A Temple of Healing for Every Mind</h1>
+        <p>Expert therapists. Affordable care. Tailored just for you.</p>
+    </header>
+
+    <section class="about">
+        <h2>About MentHealX</h2>
+        <p>MentHealX is an online therapy platform dedicated to providing personalized care for individuals battling OCD and other mental health challenges. With our team of licensed therapists and a secure, user-friendly platform, we’re here to guide you on your journey to mental wellness.</p>
+    </section>
+
+    <section class="cta-options">
+        <h2>Start Your Journey with Us</h2>
+        <div class="cta-step">
+            <h3>Step 1: Tell Us About Yourself</h3>
+            <p>Filling out this form helps us understand your unique needs, so we can match you with the most suitable therapist.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkSbBkfo0evv3GXS4YQVNeaaNtLSi9ZcauR-o1w0Hwk1cN_g/viewform?usp=sharing" 
+               target="_blank">Fill Out the Form</a>
+        </div>
+        <div class="cta-step">
+            <h3>Step 2: Book a Therapy Session</h3>
+            <p>Ready to start? Schedule your first therapy session at a time that’s convenient for you.</p>
+            <a href="https://calendly.com/menthealx-info/therapy-session-with-menthealx-therapist" 
+               target="_blank">Book a Session</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>What We Offer</h2>
+        <div class="service-card">
+            <h3>OCD-Focused Therapy</h3>
+            <p>Specialized therapy sessions for OCD tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+            <h3>Flexible Scheduling</h3>
+            <p>Sessions that fit your schedule and lifestyle.</p>
+        </div>
+        <div class="service-card">
+            <h3>Confidential Care</h3>
+            <p>100% secure and private therapy sessions.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2>Our Pricing Plans</h2>
+        <div class="plan">
+            <h3>Pay Per Session</h3>
+            <p>₹1,500/session</p>
+            <p>Perfect for those who want to pay as they go.</p>
+        </div>
+        <div class="plan">
+            <h3>Monthly Subscription</h3>
+            <p>₹5,000/month</p>
+            <p>Four sessions per month for consistent progress.</p>
+        </div>
+        <div class="plan">
+            <h3>Annual Plan</h3>
+            <p>₹55,000/year</p>
+            <p>Best value for long-term therapy goals.</p>
+            <p class="cta">Contact us for custom plans: <a href="mailto:info@menthealx.com">info@menthealx.com</a></p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div>
+                <h3>1. Fill Out a Form</h3>
+                <p>Tell us about yourself and your needs.</p>
+            </div>
+            <div>
+                <h3>2. Match with a Therapist</h3>
+                <p>We’ll match you with a therapist suited to your specific needs.</p>
+            </div>
+            <div>
+                <h3>3. Start Your Sessions</h3>
+                <p>Begin your personalized therapy sessions at your convenience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="question">
+            <h3>Is my therapy session confidential?</h3>
+            <p>Yes, all our sessions are completely confidential. We prioritize your privacy and data security.</p>
+        </div>
+        <div class="question">
+            <h3>Can I choose my therapist?</h3>
+            <p>While we match you with a therapist based on your needs, you can request a change at any time if you feel it's necessary.</p>
+        </div>
+        <div class="question">
+            <h3>How do I cancel a session?</h3>
+            <p>You can cancel a session up to 24 hours in advance through your account. Cancellations within 24 hours may incur a fee.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MentHealX. All Rights Reserved.</p>
+        <p>For inquiries, contact us at <a href="mailto:info@menthealx.com">info@menthealx.com</a></p>
+    </footer>
+</body>
+</html>
